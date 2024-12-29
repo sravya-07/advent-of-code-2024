@@ -12,7 +12,7 @@ def safe_report(rep):
             return False
     return True
 
-def can_it_be_safe(rep):
+def can_it_be_safe(rep): # brute force
     subsets = [rep[:i] + rep[i+1:] for i in range(len(rep))]
     for i in subsets:
          if safe_report(i):
